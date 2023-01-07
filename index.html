@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #kk {
+            width: 400px;
+            background-color: red;
+            color: azure;
+            border-radius: 10px;
+            box-shadow: 2px 4px 8px gray;
+            text-shadow: 4px 3px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 id="kk">Problem Solving</h1>
+    </center>
+    <p>Question 1 : Find the Smaller Angle</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+        var Minimal_Angle = (h, m) => 
+        {
+          let hrs = (h % 12 + m / 60)*30;
+          let min = m * 6;
+          let minangle = Math.abs(hrs - min);
+          return minangle;
+        };
+         
+    </pre>
+    <hr>
+    <br>
+    <p>Question 2 : Check whether the year is Leap year or not.</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+        var Check_Leap = (year) => 
+        {
+         
+          if(year % 4 === 0 &&(year % 100 !== 0 || year % 400 === 0)){
+            return "Leap Year";
+          }
+          else{
+            return "Non Leap Year";
+          }
+        
+        };
+         
+        
+    </pre>
+    <hr>
+    <br>
+    <p>Question 3 : Perfect Number Check."</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+        var Perfect_Check = (N) => 
+        {
+            let add = 0;
+            for(let i=1; i< N; i++){
+              add += i;
+            }
+            if(add == N){
+              return "YES";
+            }
+            else{
+              return "NO";
+            }
+                
+        };
+               
+    </pre>
+    <hr>
+    <br>
+    <p>Question 4 : Reverse a Number.</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+       
+var Reverse_Number = (N) => 
+{
+ N = N +"";
+  return parseInt(N.split("").reverse().join(""));
+
+};
+ 
+    </pre>
+    <hr>
+    <br>
+    <p>Question 5 :Substring Check.</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+        var Substring_Check = (S1, S2) => 
+        {
+            var substr = S1.includes(S2) ;
+            if(substr === true){
+              return "YES";
+            }
+            else{
+              return "NO";
+            }
+        };
+         
+    </pre>
+</body>
+
+</html>
